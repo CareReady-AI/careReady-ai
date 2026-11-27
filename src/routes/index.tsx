@@ -4,6 +4,7 @@ import { ProtectedRoute } from '../components/common/ProtectedRoute';
 import { PatientLayout } from '../layouts/PatientLayout';
 import { AdminLayout } from '../layouts/AdminLayout';
 
+import { LandingPage } from '../pages/LandingPage';
 import { LoginPage } from '../pages/auth/LoginPage';
 import { RegisterPage } from '../pages/auth/RegisterPage';
 import { PatientDashboardPage } from '../pages/patient/PatientDashboardPage';
@@ -21,7 +22,7 @@ import { NotFoundPage } from '../pages/errors/NotFoundPage';
 export const AppRoutes: React.FC = () => {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/login" replace />} />
+      <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
 

@@ -27,14 +27,14 @@ export const Sidebar: React.FC<SidebarProps> = ({ items, isOpen, onClose, title,
       )}
       <aside
         className={cn(
-          'fixed top-0 bottom-0 left-0 z-40 w-64 bg-white border-r border-slate-200 flex flex-col transition-transform duration-200 lg:translate-x-0',
+          'fixed top-0 bottom-0 left-0 z-40 w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col transition-transform duration-200 lg:translate-x-0',
           isOpen ? 'translate-x-0' : '-translate-x-full'
         )}
       >
-        <div className="h-16 flex items-center px-6 border-b border-slate-100 gap-2">
-          <span className="font-bold text-lg text-teal-800">{title}</span>
+        <div className="h-16 flex items-center px-6 border-b border-slate-100 dark:border-slate-800 gap-2">
+          <span className="font-bold text-lg text-teal-800 dark:text-teal-400">{title}</span>
           {badge && (
-            <span className="text-[10px] font-semibold bg-teal-100 text-teal-800 px-2 py-0.5 rounded-full uppercase">
+            <span className="text-[10px] font-semibold bg-teal-100 dark:bg-teal-900/60 text-teal-800 dark:text-teal-200 px-2 py-0.5 rounded-full uppercase">
               {badge}
             </span>
           )}
@@ -49,8 +49,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ items, isOpen, onClose, title,
                 cn(
                   'flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors',
                   isActive
-                    ? 'bg-teal-50 text-teal-800 font-semibold'
-                    : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                    ? 'bg-teal-50 dark:bg-teal-950/50 text-teal-800 dark:text-teal-300 font-semibold'
+                    : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-100'
                 )
               }
             >
