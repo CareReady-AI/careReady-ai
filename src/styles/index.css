@@ -1,44 +1,54 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-  --color-primary: #0F766E;
-  --color-mint: #45E6B8;
-  --color-mint-hover: #38cfa4;
-  --color-dark-bg: #070D18;
-  --color-dark-nav: #0D1525;
-  --color-background: var(--bg-main);
-  --color-surface: var(--bg-surface);
-  --color-primary-text: var(--text-primary);
-  --color-secondary-text: var(--text-secondary);
-  --color-border: var(--border-color);
+  --color-page-bg: var(--bg-page);
+  --color-section-bg: var(--bg-section);
+  --color-card-bg: var(--bg-card);
+  --color-header-bg: var(--bg-header);
+  --color-footer-bg: var(--bg-footer);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-border-color: var(--border-color);
+  --color-accent: var(--accent-mint);
+  --color-accent-hover: var(--accent-mint-hover);
 }
 
 :root {
-  --bg-main: #F8FAFC;
-  --bg-surface: #FFFFFF;
-  --bg-nav: rgba(255, 255, 255, 0.85);
+  /* Light theme: Clean white or very light background, white cards, dark primary text, muted grey secondary text, mint green accents */
+  --bg-page: #F8FAFC;
+  --bg-section: #F1F5F9;
+  --bg-card: #FFFFFF;
+  --bg-header: #FFFFFF;
+  --bg-footer: #FFFFFF;
   --text-primary: #0B132B;
   --text-secondary: #475569;
   --border-color: #E2E8F0;
-  --brand-mint: #10B981;
+  --accent-mint: #10B981;
+  --accent-mint-hover: #059669;
   color-scheme: light;
 }
 
 .dark {
-  --bg-main: #060B14;
-  --bg-surface: #0E1626;
-  --bg-nav: rgba(13, 21, 37, 0.75);
+  /* Dark theme: Deep navy/black background, dark navy cards, white primary text, muted secondary text, mint green accents */
+  --bg-page: #060B14;
+  --bg-section: #0B1324;
+  --bg-card: #0D1525;
+  --bg-header: #0D1525;
+  --bg-footer: #080E1C;
   --text-primary: #FFFFFF;
   --text-secondary: #94A3B8;
   --border-color: rgba(255, 255, 255, 0.1);
-  --brand-mint: #45E6B8;
+  --accent-mint: #45E6B8;
+  --accent-mint-hover: #38cfa4;
   color-scheme: dark;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: var(--bg-main);
+  background-color: var(--bg-page);
   color: var(--text-primary);
   transition: background-color 250ms ease, color 250ms ease;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;

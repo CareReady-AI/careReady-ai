@@ -25,9 +25,9 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className }) => {
       title={`Switch to ${isDark ? 'light' : 'dark'} mode`}
     >
       {isDark ? (
-        <Sun className="h-5 w-5 text-amber-400 transition-transform duration-200 rotate-0 hover:rotate-45" />
+        <Moon className="h-5 w-5 text-indigo-400 dark:text-cyan-300 transition-transform duration-200 rotate-0 hover:-rotate-12" />
       ) : (
-        <Moon className="h-5 w-5 text-slate-600 transition-transform duration-200 rotate-0 hover:-rotate-12" />
+        <Sun className="h-5 w-5 text-amber-500 transition-transform duration-200 rotate-0 hover:rotate-45" />
       )}
     </button>
   );
